@@ -1,12 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Image
+          style={styles.image}
+          source={{uri:'https://thumbs.dreamstime.com/b/crian%C3%A7a-que-guarda-o-sinal-com-o-ola-portugu%C3%AAs-da-palavra-ol%C3%A1-48500488.jpg'}}
+        />
+      <Text style={styles.text}>
+        Se você está lendo esse texto, {'\n'} significa que funcionou!! {'\n\n'} Bom trabalho 😉
+      </Text>
     </View>
   );
 }
@@ -18,4 +22,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  image: {
+    width: 100,
+    height: 100,
+  }, 
+  text: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: '600',
+    margin: 20,
+  }
 });
